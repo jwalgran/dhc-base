@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -e
+
+if [[ -n "${DHC_DEBUG}" ]]; then
+    set -x
+fi
+
+function usage() {
+    echo -n \
+        "Usage: $(basename "$0")
+Run dev server
+"
+}
+
+if [ "${BASH_SOURCE[0]}" = "${0}" ]; then
+    if [ "${1:-}" = "--help" ]; then
+        usage
+    else
+        scripts/manage runserver 127.0.0.1:9990
+    fi
+fi

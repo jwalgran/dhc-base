@@ -1,0 +1,23 @@
+#!/bin/bash
+
+set -e
+
+if [[ -n "${DHC_DEBUG}" ]]; then
+    set -x
+fi
+
+function usage() {
+    echo -n \
+        "Usage: $(basename "$0")
+Run a Django management command.
+"
+}
+
+if [ "${BASH_SOURCE[0]}" = "${0}" ]; then
+    if [ "${1:-}" = "--help" ]; then
+        usage
+    else
+        cd src/django
+        python manage.py "$@"
+    fi
+fi
