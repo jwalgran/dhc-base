@@ -1,1 +1,2 @@
+django-htmx~=1.18.0
 Django~=4.2.0

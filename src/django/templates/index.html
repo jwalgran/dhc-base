@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>dhc</h1>
+    <div>
+        Django + HTMX + django-components base project
+    </div>
+    <div>
+        Version:
+        <span hx-trigger="load" hx-get="/static/version.txt">loading...</span>
+    </div>
+    <div>
+        (The content of /static/version.txt should have been fetched by HTMX and appended above)
+    </div>
+{% endblock %}
