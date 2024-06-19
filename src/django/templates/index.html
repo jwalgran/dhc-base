@@ -3,10 +3,10 @@
 {% block content %}
     {% component "heading" content="dhc" %}{% endcomponent %}
     (There should be a green H1 tag above that shows an alert when clicked)
-    <div>
+    <h2>
         Django + HTMX + django-components base project
-    </div>
-    <div>
+    </h2>
+    <div class="box">
         Version:
         <span hx-trigger="load" hx-get="/static/version.txt">loading...</span>
     </div>

@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/missing.min.css' %}" media="all" rel="stylesheet">
     <title>dhc</title>
     {% component_css_dependencies %}
 </head>
 <body>
-    {% block content %}
-    {% endblock %}
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
     <script src="{% static 'js/htmx.min.js' %}" defer></script>
     {% component_js_dependencies %}
 </body>
